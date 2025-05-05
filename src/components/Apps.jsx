@@ -38,20 +38,24 @@ const Apps = () => {
     <div className="w-11/12 mx-auto py-20">
       {/* Trending Apps Section */}
       <section className="mb-30">
-        <h1 className="text-3xl font-bold mb-6">Trending Apps</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
+          Trending Apps
+        </h1>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-6">
           {trendingApps.map((app) => (
             <Link
               to="/app-details"
               key={app.id}
-              className="p-4 rounded-xl hover:shadow-lg hover:bg-blue-100 transition cursor-pointer "
+              className=" p-4 rounded-xl hover:shadow-lg hover:bg-blue-100 transition cursor-pointer "
             >
               <img
                 src={app.thumbnail}
                 alt={app.name}
-                className="w-40 h-40 object-cover rounded-2xl mb-4"
+                className="w-20 h-20 lg:w-40 lg:h-40 object-cover rounded-2xl mb-4"
               />
-              <h3 className="text-xl font-bold">{app.name}</h3>
+              <h3 className="text-lg md:text-xl font-semibold md:font-bold">
+                {app.name}
+              </h3>
               <div className="flex items-center space-x-1 text-gray-600 mt-2">
                 <span>Rating: {app.rating}</span>
                 <GoStarFill />
@@ -65,8 +69,10 @@ const Apps = () => {
       {/* Categories Sections */}
       {Object.keys(groupedApps).map((category) => (
         <section key={category} className="mb-20">
-          <h2 className="text-3xl font-bold mb-6">{category}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
+            {category}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-6">
             {groupedApps[category].map((app) => (
               <Link
                 to="/app-details"
@@ -76,9 +82,9 @@ const Apps = () => {
                 <img
                   src={app.thumbnail}
                   alt={app.name}
-                  className="w-40 h-40 object-cover rounded-2xl mb-4"
+                  className="w-20 h-20 lg:w-40 lg:h-40 object-cover rounded-2xl mb-4"
                 />
-                <h3 className="text-xl font-bold">{app.name}</h3>
+                <h3 className="text-lg lg:text-xl font-bold">{app.name}</h3>
                 <div className="flex items-center space-x-1 text-gray-600 mt-2">
                   <span>Rating: {app.rating}</span>
                   <GoStarFill />

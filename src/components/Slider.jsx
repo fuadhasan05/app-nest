@@ -10,7 +10,7 @@ import slider3 from "../assets/programming-hero-banner.jpeg";
 
 const Slider = () => {
   return (
-    <div className="w-full sm:w-11/12 md:w-10/12 lg:w-11/12 mx-auto py-10 ">
+    <div className="w-11/12 mx-auto py-10 ">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={30}
@@ -20,18 +20,18 @@ const Slider = () => {
         loop={true}
       >
         <SwiperSlide>
-          <div className=" bg-blue-50 text-white py-20 px-40 rounded-lg">
+          <div className=" bg-blue-50 text-white py-5 lg:py-20 px-5 lg:px-40 rounded-lg">
             <img src={slider1} alt="" className="w-320 rounded-2xl" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=" bg-blue-50 text-white py-20 px-40 rounded-lg">
-          <img src={slider2} alt="" className="w-320 rounded-2xl" />
+          <div className=" bg-blue-50 text-white py-5 lg:py-20 px-5 lg:px-40 rounded-lg">
+            <img src={slider2} alt="" className="w-320 rounded-2xl" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-blue-50 text-white py-20 px-40 rounded-lg">
-          <img src={slider3} alt="" className="w-320 rounded-2xl" />
+          <div className="bg-blue-50 text-white py-5 lg:py-20 px-5 lg:px-40 rounded-lg">
+            <img src={slider3} alt="" className="w-320 rounded-2xl" />
           </div>
         </SwiperSlide>
       </Swiper>

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router";
+import logo from "../assets/app_logo.png";
 
 const Footer = () => {
   return (
@@ -12,10 +13,13 @@ const Footer = () => {
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo + Description */}
         <div>
-          <Link to="/" className="text-xl font-bold text-primary">
-            AppNest
-          </Link>
-          <p className=" pt-8">
+          <div className="flex items-center space-x-2">
+            <img src={logo} alt="Logo" className="w-10 h-10" />
+            <Link to="/" className="text-xl font-bold text-primary">
+              AppNest
+            </Link>
+          </div>
+          <p className="pt-4">
             Building modern apps with love & innovation. Stay connected with us!
           </p>
         </div>
