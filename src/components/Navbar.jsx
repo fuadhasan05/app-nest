@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/app_logo.png";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
   return (
@@ -9,7 +9,9 @@ const Navbar = () => {
         {/* Left - Logo + Name */}
         <div className="flex items-center space-x-2">
           <img src={logo} alt="Logo" className="w-10 h-10" />
-          <span className="text-2xl font-bold text-primary">AppNest</span>
+          <Link to="/" className="text-3xl font-bold text-primary">
+            AppNest
+          </Link>
         </div>
 
         {/* Center - Nav Links */}
