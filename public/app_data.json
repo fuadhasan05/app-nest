@@ -1,0 +1,416 @@
+[
+  {
+    "id": "app001",
+    "name": "Udemy",
+    "developer": "Udemy Inc.",
+    "thumbnail": "https://i.ibb.co.com/CKC65rx1/udemy-th.png",
+    "banner": "https://i.ibb.co.com/zVDwhcHJ/udemy-banner.png",
+    "downloads": 1000000,
+    "category": "Education",
+    "rating": 4.0,
+    "description": "Udemy is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_1",
+        "rating": 4,
+        "comment": "I use Udemy every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "Trello",
+    "developer": "Trello Inc.",
+    "thumbnail": "https://i.ibb.co.com/fdFtTdXj/trello-th.png",
+    "banner": "https://i.ibb.co.com/23hPcKG2/trello-banner.png",
+    "downloads": 1100000,
+    "category": "Productivity",
+    "rating": 4.1,
+    "description": "Trello is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_2",
+        "rating": 5,
+        "comment": "I use Trello every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Todoist",
+    "developer": "Todoist Inc.",
+    "thumbnail": "https://i.ibb.co.com/m5P1rF5X/todolist-th.png",
+    "banner": "https://i.ibb.co.com/xKt7snKY/todolist-banner.png",
+    "downloads": 1200000,
+    "category": "Productivity",
+    "rating": 4.2,
+    "description": "Todoist is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_3",
+        "rating": 4,
+        "comment": "I use Todoist every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Inc.",
+    "thumbnail": "https://i.ibb.co.com/mFtV5ybY/programming-hero-th.webp",
+    "banner": "https://i.ibb.co.com/DgkvJqqN/programming-hero-banner.jpg",
+    "downloads": 1300000,
+    "category": "Education",
+    "rating": 4.3,
+    "description": "Programming Hero is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_4",
+        "rating": 5,
+        "comment": "I use Programming Hero every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "Notion",
+    "developer": "Notion Inc.",
+    "thumbnail": "https://i.ibb.co.com/rKdzPxK0/notion-th.png",
+    "banner": "https://i.ibb.co.com/KcZvp8Xg/notion-banner.png",
+    "downloads": 1400000,
+    "category": "Productivity",
+    "rating": 4.4,
+    "description": "Notion is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_5",
+        "rating": 4,
+        "comment": "I use Notion every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "MyFitnessPal",
+    "developer": "MyFitnessPal Inc.",
+    "thumbnail": "https://i.ibb.co.com/ZzfTjcCr/My-Fitness-Pa-th.png",
+    "banner": "https://i.ibb.co.com/gLjLCqXH/My-Fitness-Pa-banner.png",
+    "downloads": 1500000,
+    "category": "Health",
+    "rating": 4.0,
+    "description": "MyFitnessPal is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_6",
+        "rating": 5,
+        "comment": "I use MyFitnessPal every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "Khan Academy",
+    "developer": "Khan Academy Inc.",
+    "thumbnail": "https://i.ibb.co.com/qYYyR3Rh/Headspace-th.png",
+    "banner": "https://i.ibb.co.com/nMwkTXws/Headspace-banner.png",
+    "downloads": 1600000,
+    "category": "Education",
+    "rating": 4.1,
+    "description": "Khan Academy is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_7",
+        "rating": 4,
+        "comment": "I use Khan Academy every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "Headspace",
+    "developer": "Headspace Inc.",
+    "thumbnail": "https://i.ibb.co.com/1fPbctDf/google-keep-th.png",
+    "banner": "https://i.ibb.co.com/mFFJNrHs/google-keep-banner.png",
+    "downloads": 1700000,
+    "category": "Health",
+    "rating": 4.2,
+    "description": "Headspace is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_8",
+        "rating": 5,
+        "comment": "I use Headspace every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app009",
+    "name": "Google Keep",
+    "developer": "Google Keep Inc.",
+    "thumbnail": "https://i.ibb.co.com/DDFkvzJY/Flo-th.png",
+    "banner": "https://i.ibb.co.com/3mLCP68y/Flo-banner.png",
+    "downloads": 1800000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "Google Keep is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_9",
+        "rating": 4,
+        "comment": "I use Google Keep every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "Flo",
+    "developer": "Flo Inc.",
+    "thumbnail": "https://i.ibb.co.com/CK0MLNvq/FitOn-th.jpg",
+    "banner": "https://i.ibb.co.com/9xQqzMc/Fit-On-banner.jpg",
+    "downloads": 1900000,
+    "category": "Health",
+    "rating": 4.4,
+    "description": "Flo is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_10",
+        "rating": 5,
+        "comment": "I use Flo every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "FitOn",
+    "developer": "FitOn Inc.",
+    "thumbnail": "https://i.ibb.co.com/BV3j2K27/Evernote-th.png",
+    "banner": "https://i.ibb.co.com/fGtP20xp/Evernote-banner.png",
+    "downloads": 2000000,
+    "category": "Health",
+    "rating": 4.0,
+    "description": "FitOn is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_11",
+        "rating": 4,
+        "comment": "I use FitOn every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "Evernote",
+    "developer": "Evernote Inc.",
+    "thumbnail": "https://i.ibb.co.com/p6xPzN8J/duolingo-th.png",
+    "banner": "https://i.ibb.co.com/kggD87Bz/duolingo-banner.png",
+    "downloads": 2100000,
+    "category": "Productivity",
+    "rating": 4.1,
+    "description": "Evernote is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_12",
+        "rating": 5,
+        "comment": "I use Evernote every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app013",
+    "name": "Duolingo",
+    "developer": "Duolingo Inc.",
+    "thumbnail": "https://i.ibb.co.com/LDhdjsYQ/coursera-th.png",
+    "banner": "https://i.ibb.co.com/M5V8FWNg/coursera-banner.jpg",
+    "downloads": 2200000,
+    "category": "Education",
+    "rating": 4.2,
+    "description": "Duolingo is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_13",
+        "rating": 4,
+        "comment": "I use Duolingo every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app014",
+    "name": "Coursera",
+    "developer": "Coursera Inc.",
+    "thumbnail": "https://i.ibb.co.com/HD4sqq4P/Click-Up-th.png",
+    "banner": "https://i.ibb.co.com/JWqNLDHP/Click-Up-banner.png",
+    "downloads": 2300000,
+    "category": "Education",
+    "rating": 4.3,
+    "description": "Coursera is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_14",
+        "rating": 5,
+        "comment": "I use Coursera every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app015",
+    "name": "ClickUp",
+    "developer": "ClickUp Inc.",
+    "thumbnail": "https://i.ibb.co.com/NdmG7vpt/Calm-th.jpg",
+    "banner": "https://i.ibb.co.com/CpGdb2MY/Calm-banner.jpg",
+    "downloads": 2400000,
+    "category": "Productivity",
+    "rating": 4.4,
+    "description": "ClickUp is a top-rated app in the productivity category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_15",
+        "rating": 4,
+        "comment": "I use ClickUp every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app016",
+    "name": "Calm",
+    "developer": "Calm Inc.",
+    "thumbnail": "https://i.ibb.co.com/WXKmZrN/brilliant-th.jpg",
+    "banner": "https://i.ibb.co.com/NnCF8ghy/brilliant-banner.png",
+    "downloads": 2500000,
+    "category": "Health",
+    "rating": 4.0,
+    "description": "Calm is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_16",
+        "rating": 5,
+        "comment": "I use Calm every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app017",
+    "name": "Brilliant",
+    "developer": "Brilliant Inc.",
+    "thumbnail": "https://i.ibb.co.com/Z6wH7q1b/app018-th.jpg",
+    "banner": "https://i.ibb.co.com/5W1k0sDZ/app018-banner.png",
+    "downloads": 2600000,
+    "category": "Education",
+    "rating": 4.1,
+    "description": "Brilliant is a top-rated app in the education category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_17",
+        "rating": 4,
+        "comment": "I use Brilliant every day. It's extremely helpful and reliable!"
+      }
+    ]
+  },
+  {
+    "id": "app018",
+    "name": "Wellness Tracker",
+    "developer": "Wellness Tracker Inc.",
+    "thumbnail": "https://i.ibb.co.com/Z6wH7q1b/app018-th.jpg",
+    "banner": "https://i.ibb.co.com/5W1k0sDZ/app018-banner.png",
+    "downloads": 2700000,
+    "category": "Health",
+    "rating": 4.2,
+    "description": "Wellness Tracker is a top-rated app in the health category, helping users improve their daily lives.",
+    "features": [
+      "User-friendly interface",
+      "Cross-platform sync",
+      "Customizable settings"
+    ],
+    "reviews": [
+      {
+        "user": "user_18",
+        "rating": 5,
+        "comment": "I use Wellness Tracker every day. It's extremely helpful and reliable!"
+      }
+    ]
+  }
+]

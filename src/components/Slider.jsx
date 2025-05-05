@@ -7,7 +7,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 const Slider = () => {
     return (
-        <div className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 mx-auto py-10">
+        <div className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 mx-auto py-10 ">
             <Swiper
                 modules={[Pagination, Autoplay]}
                 spaceBetween={30}
