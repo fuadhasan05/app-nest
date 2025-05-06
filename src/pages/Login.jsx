@@ -3,15 +3,14 @@ import { Link } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    // Handle login logic here (e.g., Firebase, JWT, etc.)
+  };
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        // Handle login logic here (e.g., Firebase, JWT, etc.)
-      };
-    
-      const handleGoogleLogin = () => {
-        // Handle Google login logic here
-      };
+  const handleGoogleLogin = () => {
+    // Handle Google login logic here
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
@@ -20,6 +19,7 @@ const Login = () => {
           Login to Your Account
         </h2>
         <form onSubmit={handleLogin} className="space-y-4">
+          {/* Email */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Email
@@ -31,6 +31,7 @@ const Login = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
+          {/* Password */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Password
@@ -58,13 +59,16 @@ const Login = () => {
           onClick={handleGoogleLogin}
           className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition duration-300 cursor-pointer"
         >
-          <FcGoogle />
+          <FcGoogle size={20} />
           Continue with Google
         </button>
 
         <p className="text-sm text-center mt-6">
           Don't have an account?{" "}
-          <Link to="/auth/register" className="text-blue-600 hover:underline cursor-pointer">
+          <Link
+            to="/auth/register"
+            className="text-blue-600 hover:underline cursor-pointer"
+          >
             Register here
           </Link>
         </p>
