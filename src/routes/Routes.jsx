@@ -5,7 +5,7 @@ import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import MyProfile from "../pages/MyProfile";
 import AppDetails from "../pages/AppDetails";
-
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -26,13 +26,17 @@ const router = createBrowserRouter([
       },
       {
         path: "/auth/profile",
-        element: <MyProfile></MyProfile>
-      }
+        element: <MyProfile></MyProfile>,
+      },
     ],
   },
   {
     path: "/app-details/:id",
-    element: <AppDetails></AppDetails>,
+    element: (
+      <PrivateRoute>
+        <AppDetails></AppDetails>
+      </PrivateRoute>
+    ),
     loader: () => fetch("/app_data.json"),
   },
   {
