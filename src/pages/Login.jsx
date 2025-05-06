@@ -1,11 +1,11 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
-
-  const {login} = use(AuthContext);
+  const { login } = use(AuthContext);
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -13,18 +13,19 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email,password);
+    console.log(email, password);
 
-    login(email,password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-    })
-    .catch((error) => {
-      // const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage,errorMessage);
-    });
+    login(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        // const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage, errorMessage);
+      });
   };
 
   const handleGoogleLogin = () => {};
