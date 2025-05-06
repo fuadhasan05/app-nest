@@ -1,16 +1,33 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
 import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
+
+  const {login} = use(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
-    // Handle login logic here (e.g., Firebase, JWT, etc.)
+
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log(email,password);
+
+    login(email,password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      // const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage,errorMessage);
+    });
   };
 
-  const handleGoogleLogin = () => {
-    // Handle Google login logic here
-  };
+  const handleGoogleLogin = () => {};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
@@ -25,6 +42,7 @@ const Login = () => {
               Email
             </label>
             <input
+              name="email"
               type="email"
               required
               placeholder="you@example.com"
@@ -37,6 +55,7 @@ const Login = () => {
               Password
             </label>
             <input
+              name="password"
               type="password"
               required
               placeholder="Your password"

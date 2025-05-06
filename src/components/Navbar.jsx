@@ -4,8 +4,16 @@ import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-
-  const {user} = use(AuthContext);
+  const { user, logOut } = use(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        alert("You LogOut");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div>
       <nav className="w-11/12 mx-auto flex items-center justify-between py-4 bg-white">
@@ -19,10 +27,11 @@ const Navbar = () => {
 
         {/* Center - Nav Links */}
         <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
+          <div>{user && user.email}</div>
           <NavLink to="/" className="hover:text-primary">
             Apps
           </NavLink>
-          <NavLink to="/my-profile" className="hover:text-primary">
+          <NavLink to="/auth/profile" className="hover:text-primary">
             My Profile
           </NavLink>
           <NavLink to="/blogs" className="hover:text-primary">
@@ -32,10 +41,18 @@ const Navbar = () => {
 
         {/* Right - Login Button */}
         <div>
-          {user && user.name} 
-          <Link to="/auth/login" className="px-8 py-2 btn btn-primary">
-            Login
-          </Link>
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="px-8 py-2 btn btn-primary"
+            >
+              LogOut
+            </button>
+          ) : (
+            <Link to="/auth/login" className="px-8 py-2 btn btn-primary">
+              Login
+            </Link>
+          )}
         </div>
       </nav>
     </div>

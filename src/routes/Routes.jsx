@@ -3,6 +3,8 @@ import HomeLayout from "../layout/HomeLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
+import MyProfile from "../pages/MyProfile";
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: "/auth/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/auth/profile",
+        element: <MyProfile></MyProfile>
       }
     ],
   },
