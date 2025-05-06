@@ -44,7 +44,7 @@ const Apps = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-6">
           {trendingApps.map((app) => (
             <Link
-              to="/app-details"
+              to={`/app-details/${app.id}`}
               key={app.id}
               className=" p-4 rounded-xl hover:shadow-lg hover:bg-blue-100 transition cursor-pointer "
             >
@@ -75,7 +75,7 @@ const Apps = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 lg:gap-6">
             {groupedApps[category].map((app) => (
               <Link
-                to="/app-details"
+                to={`/app-details/${app.id}`}
                 key={app.id}
                 className="p-4 rounded-xl hover:shadow-lg hover:bg-blue-100 transition cursor-pointer"
               >

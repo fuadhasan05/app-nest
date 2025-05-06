@@ -4,6 +4,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
 import MyProfile from "../pages/MyProfile";
+import AppDetails from "../pages/AppDetails";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         element: <MyProfile></MyProfile>
       }
     ],
+  },
+  {
+    path: "/app-details/:id",
+    element: <AppDetails></AppDetails>,
+    loader: () => fetch("/app_data.json"),
   },
   {
     path: "/blogs",
