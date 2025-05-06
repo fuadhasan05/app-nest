@@ -29,7 +29,9 @@ const Navbar = () => {
 
         {/* Right - Login Button */}
         <div>
-          <button className="px-8 py-2 btn btn-primary">Login</button>
+          <Link to="/auth/login" className="px-8 py-2 btn btn-primary">
+            Login
+          </Link>
         </div>
       </nav>
     </div>
