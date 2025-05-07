@@ -1,17 +1,22 @@
-import React, { use, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../provider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { createUser, setUser, updateUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = useContext(AuthContext);
   const [passwordError, setPasswordError] = useState("");
 
+  // React Router hook for navigation
   const navigate = useNavigate();
 
+  // Handle form submission for registration
   const handleRegister = (e) => {
     e.preventDefault();
 
+    // Extract form data
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -29,42 +34,58 @@ const Register = () => {
       setPasswordError("Password must contain at least one lowercase letter.");
       return;
     } else {
-      setPasswordError(""); 
+      setPasswordError("");
     }
 
-    console.log({ name, email, photo, password });
-
+    // Call createUser function to register the user
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        updateUser({displayName: name, photoURL:photo}).then(() =>{
-          setUser({ ...user,displayName: name, photoURL:photo });
-          navigate('/');
-        })
-        .catch((error) => {
-          console.log(error);
-          setUser(user);
-        });
+
+        // Update user profile with name and photo URL
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            // Set user in context and navigate to the home page
+            setUser({ ...user, displayName: name, photoURL: photo });
+
+            // Show success toast notification
+            toast.success("Account created successfully!");
+
+            navigate("/");
+          })
+          .catch((error) => {
+
+            // Show error toast notification for profile update failure
+            toast.error(`Failed to update profile: ${error.message}`);
+          });
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
-        alert(errorMessage);
+
+        // Show error toast notification for registration failure
+        toast.error(`Registration failed: ${errorMessage}`);
       });
   };
 
+  // Handle Google login (to be implemented)
   const handleGoogleLogin = () => {
-    // Handle Google login logic here
+    toast.info("Google login is not implemented yet.");
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+      {/* Toast container for notifications */}
+      <ToastContainer position="top-right" autoClose={2000} />
+
       <div className="max-w-md w-full bg-white p-8 rounded-xl shadow-lg">
+        {/* Page title */}
         <h2 className="text-2xl font-bold text-center mb-6">
           Create an Account
         </h2>
+
+        {/* Registration form */}
         <form onSubmit={handleRegister} className="space-y-4">
-          {/* Name */}
+          {/* Name input */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">Name</label>
             <input
@@ -75,7 +96,8 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          {/* Email */}
+
+          {/* Email input */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Email
@@ -88,7 +110,8 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          {/* Photo URL */}
+
+          {/* Photo URL input */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Photo URL
@@ -101,7 +124,8 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          {/* Password */}
+
+          {/* Password input */}
           <div>
             <label className="block mb-1 font-medium text-gray-700">
               Password
@@ -114,8 +138,13 @@ const Register = () => {
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          {/* Password Error */}
-          {passwordError && <p className="text-xs text-error">{passwordError}</p>}
+
+          {/* Password error message */}
+          {passwordError && (
+            <p className="text-xs text-red-600">{passwordError}</p>
+          )}
+
+          {/* Submit button */}
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300 cursor-pointer"
@@ -124,10 +153,12 @@ const Register = () => {
           </button>
         </form>
 
+        {/* Divider */}
         <div className="my-4 flex items-center justify-center">
           <span className="text-gray-500">OR</span>
         </div>
 
+        {/* Google login button */}
         <button
           onClick={handleGoogleLogin}
           className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition duration-300 cursor-pointer"
@@ -136,6 +167,7 @@ const Register = () => {
           Continue with Google
         </button>
 
+        {/* Redirect to login page */}
         <p className="text-sm text-center mt-6">
           Already have an account?{" "}
           <Link

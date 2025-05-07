@@ -1,22 +1,33 @@
-import React, { use } from "react";
+import React, { useContext } from "react";
 import logo from "../assets/app_logo.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import userIcon from "../assets/userIcon.png";
+import { ToastContainer, toast } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
 
 const Navbar = () => {
-  const { user, logOut } = use(AuthContext);
+  const { user, logOut } = useContext(AuthContext); 
+
+  // Handle logout functionality
   const handleLogout = () => {
     logOut()
       .then(() => {
-        alert("You LogOut");
+        // Show success toast notification
+        toast.success("You have successfully logged out!");
       })
       .catch((error) => {
+        // Show error toast notification
+        toast.error(`Logout failed: ${error.message}`);
         console.log(error);
       });
   };
+
   return (
     <div>
+      {/* Toast container for notifications */}
+      <ToastContainer position="top-right" autoClose={2000} />
+
       <nav className="w-11/12 mx-auto flex items-center justify-between py-4 bg-white">
         {/* Left - Logo + Name */}
         <div className="flex items-center space-x-2">
@@ -61,7 +72,7 @@ const Navbar = () => {
             <img
               className="w-10 rounded-full cursor-pointer bg-blue-400"
               src={`${user ? user.photoURL : userIcon}`}
-              alt=""
+              alt="User Profile"
             />
           </div>
 
