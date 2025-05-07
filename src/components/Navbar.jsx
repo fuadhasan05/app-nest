@@ -2,6 +2,7 @@ import React, { use } from "react";
 import logo from "../assets/app_logo.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import userIcon from "../assets/userIcon.png";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -27,20 +28,43 @@ const Navbar = () => {
 
         {/* Center - Nav Links */}
         <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
-          <div>{user && user.email}</div>
-          <NavLink to="/" className="hover:text-primary">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-semibold" : "hover:text-primary"
+            }
+          >
             Apps
           </NavLink>
-          <NavLink to="/auth/profile" className="hover:text-primary">
+          <NavLink
+            to="/auth/profile"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-semibold" : "hover:text-primary"
+            }
+          >
             My Profile
           </NavLink>
-          <NavLink to="/blogs" className="hover:text-primary">
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              isActive ? "text-primary font-semibold" : "hover:text-primary"
+            }
+          >
             Blogs
           </NavLink>
         </div>
 
         {/* Right - Login Button */}
-        <div>
+        <div className="flex gap-3">
+          {/* User Profile */}
+          <div>
+            <img
+              className="w-10 rounded-full cursor-pointer bg-blue-400"
+              src={`${user ? user.photoURL : userIcon}`}
+              alt=""
+            />
+          </div>
+
           {user ? (
             <button
               onClick={handleLogout}
