@@ -3,9 +3,9 @@ import HomeLayout from "../layout/HomeLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layout/AuthLayout";
-import MyProfile from "../pages/MyProfile";
 import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import MyProfile from "../pages/MyProfile";
 
 const router = createBrowserRouter([
   {
@@ -24,20 +24,24 @@ const router = createBrowserRouter([
         path: "/auth/register",
         element: <Register></Register>,
       },
-      {
-        path: "/auth/profile",
-        element: <MyProfile></MyProfile>,
-      },
     ],
   },
   {
     path: "/app-details/:id",
     element: (
       <PrivateRoute>
-        <AppDetails></AppDetails>
+        <AppDetails></AppDetails>,
       </PrivateRoute>
     ),
     loader: () => fetch("/app_data.json"),
+  },
+  {
+    path: "/auth/profile",
+    element: (
+      <PrivateRoute>
+        <MyProfile></MyProfile>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/blogs",

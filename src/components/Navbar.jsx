@@ -73,8 +73,8 @@ const Navbar = () => {
           {/* User Profile */}
           <div
             className="relative"
-            onMouseEnter={() => setShowTooltip(true)} // Show tooltip on hover
-            onMouseLeave={() => setShowTooltip(false)} // Hide tooltip when not hovering
+            onMouseEnter={() => setShowTooltip(true)} 
+            onMouseLeave={() => setShowTooltip(false)} 
           >
             <img
               className="w-10 h-10 rounded-full cursor-pointer bg-blue-100"
@@ -83,12 +83,14 @@ const Navbar = () => {
             />
             {/* Tooltip for username */}
             {showTooltip && user?.displayName && (
-              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-3 py-1 rounded shadow-lg">
+              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-gray-600 text-white text-sm px-3 py-1 rounded">
                 {user.displayName}
               </div>
+              
             )}
           </div>
 
+          {/* Login Link Button */}
           <div className="hidden md:block lg:block ">
           {user ? (
             <button
