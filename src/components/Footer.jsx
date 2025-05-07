@@ -5,7 +5,7 @@ import logo from "../assets/app_logo.png";
 
 const Footer = () => {
   return (
-    <footer className=" w-11/12 mx-auto  py-10">
+    <footer className=" w-11/12 mx-auto  py-20">
       <div className="py-10">
         <hr className="border-t border-gray-300" />
       </div>

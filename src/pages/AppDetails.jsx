@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import AppDetailsCard from "../components/AppDetailsCard";
 import { useLoaderData, useParams } from "react-router";
+import Footer from "../components/Footer";
 
 const AppDetails = () => {
   const data = useLoaderData();
@@ -35,6 +36,9 @@ const AppDetails = () => {
           onInstallToggle={handleInstallToggle}
         />
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 };

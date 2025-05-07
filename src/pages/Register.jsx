@@ -5,8 +5,11 @@ import { AuthContext } from "../provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const Register = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
+  const { googleLogin } = useContext(AuthContext);
+  const [ setError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
   // Set dynamic title
@@ -71,9 +74,21 @@ const Register = () => {
       });
   };
 
-  // Handle Google login (to be implemented)
+  // Handle Google login 
   const handleGoogleLogin = () => {
-    toast.info("Google login is not implemented yet.");
+    toast.info("Attempting Google login...");
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Google login successful!");
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+        toast.error(`Google login failed: ${errorMessage}`);
+      });
   };
 
   return (

@@ -89,6 +89,21 @@ const Navbar = () => {
             )}
           </div>
 
+          <div className="hidden md:block lg:block ">
+          {user ? (
+            <button
+              onClick={handleLogout}
+              className="px-8 py-2 btn btn-primary"
+            >
+              LogOut
+            </button>
+          ) : (
+            <Link to="/auth/login" className="px-8 py-2 btn btn-primary">
+              Login
+            </Link>
+          )}
+          </div>
+
           {/* Hamburger Menu for Small Devices */}
           <div className="md:hidden">
             <FaBars
