@@ -1,12 +1,16 @@
-import React, { use, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { login } = use(AuthContext);
+  const { login, googleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  // Handle form login
   const handleLogin = (e) => {
     e.preventDefault();
 
@@ -14,24 +18,42 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(email, password);
-
     login(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        navigate(`${location.state ? location.state : "/"}`);
+        toast.success("Login successful!");
+        navigate("/");
       })
       .catch((error) => {
-        const errorCode = error.code;
-        setError(errorCode);
+        const errorMessage = error.message;
+        setError(errorMessage);
+        toast.error(`Login failed: ${errorMessage}`);
       });
   };
 
-  const handleGoogleLogin = () => {};
+  // Handle Google login
+  const handleGoogleLogin = () => {
+    toast.info("Attempting Google login...");
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        toast.success("Google login successful!");
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
+        toast.error(`Google login failed: ${errorMessage}`);
+      });
+  };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+      {/* Toast container for notifications */}
+      <ToastContainer position="top-right" autoClose={1500} />
+
       <div className="max-w-md w-full bg-white p-8 rounded-xl shadow-lg">
         <h2 className="text-2xl font-bold text-center mb-6">
           Login to Your Account
@@ -76,6 +98,7 @@ const Login = () => {
           <span className="text-gray-500">OR</span>
         </div>
 
+        {/* Google Login */}
         <button
           onClick={handleGoogleLogin}
           className="w-full flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-lg hover:bg-gray-100 transition duration-300 cursor-pointer"
