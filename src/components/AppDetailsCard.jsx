@@ -162,7 +162,7 @@ const AppDetailsCard = ({
         <ul className="space-y-4">
           {reviews.map((review, index) => (
             <li key={index} className="">
-              <p className="text-gray-800 font-semibold text-sm sm:text-base">{review.user}</p>
+              <p className="text-gray-800 text-base">{review.user}</p>
               <p className="text-yellow-500 flex items-center text-sm sm:text-base">
                 Rating: {review.rating} <IoMdStar className="ml-1" />
               </p>
