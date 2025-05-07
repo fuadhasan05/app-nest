@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,6 +9,11 @@ const Login = () => {
   const [error, setError] = useState("");
   const { login, googleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
+
+  // Set dynamic title
+  useEffect(() => {
+    document.title = "Login | AppNest";
+  }, []);
 
   // Handle form login
   const handleLogin = (e) => {

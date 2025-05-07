@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../provider/AuthProvider";
@@ -8,6 +8,11 @@ import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
   const { createUser, setUser, updateUser } = useContext(AuthContext);
   const [passwordError, setPasswordError] = useState("");
+
+  // Set dynamic title
+  useEffect(() => {
+    document.title = "Register | AppNest";
+  }, []);
 
   // React Router hook for navigation
   const navigate = useNavigate();
@@ -54,7 +59,6 @@ const Register = () => {
             navigate("/");
           })
           .catch((error) => {
-
             // Show error toast notification for profile update failure
             toast.error(`Failed to update profile: ${error.message}`);
           });
