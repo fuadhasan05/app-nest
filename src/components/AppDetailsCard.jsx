@@ -1,5 +1,5 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import { IoMdStar } from "react-icons/io";
 
 const AppDetailsCard = ({
   details,
@@ -17,25 +17,32 @@ const AppDetailsCard = ({
 
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
+      <div className="bg-blue-50 rounded-lg p-10 mb-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
-          <img
-            src={details.thumbnail}
-            alt={`${details.name} Thumbnail`}
-            className="w-32 h-32 rounded-lg object-cover"
-          />
-          <div className="flex-1">
-            <h1 className="text-2xl font-bold text-gray-800">{details.name}</h1>
-            <p className="text-gray-600">Developer: {details.developer}</p>
-            <p className="text-gray-600">Downloads: {details.downloads}</p>
-            <p className="text-gray-600">Category: {details.category}</p>
-            <p className="text-gray-600">Rating: {details.rating}</p>
-            <p className="text-gray-600 mt-4">{details.description}</p>
-            <h3 className="text-lg font-semibold mt-6">Features:</h3>
-
+          {/* left side app details */}
+          <div className="flex-1 space-y-4">
+            <h1 className="text-5xl font-bold">{details.name}</h1>
+            <p className="text-blue-600">{details.developer}</p>
+            <div className="flex items-center gap-10">
+              <div className="text-center">
+                <div className="font-semibold">{details.downloads}</div>
+                <p className="text-gray-600 text-s">Downloads</p>
+              </div>
+              <div className="text-center">
+                <p className="font-semibold">Category</p>
+                <div className="text-s">{details.category}</div>
+              </div>
+              <div className="text-center">
+                <div className="flex items-center font-semibold">
+                  {details.rating}
+                  <IoMdStar />
+                </div>
+                <p className="text-gray-600 text-s">Rated</p>
+              </div>
+            </div>
             <button
               onClick={onInstallToggle}
-              className={`mt-6 px-4 py-2 rounded text-white ${
+              className={`mt-6 px-10 py-2 rounded text-white cursor-pointer ${
                 isInstalled
                   ? "bg-red-500 hover:bg-red-600"
                   : "bg-blue-500 hover:bg-blue-600"
@@ -43,12 +50,27 @@ const AppDetailsCard = ({
             >
               {isInstalled ? "Uninstall" : "Install"}
             </button>
+            <p className=" mt-4">{details.description}</p>
+            {/* Features Section */}
+            <h3 className="text-lg font-semibold mt-6">Features:</h3>
+            <ul className="list-disc list-inside text-gray-600">
+              {details.features?.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
+            </ul>
           </div>
+          {/* Thumbnail */}
+          <img
+            src={details.thumbnail}
+            alt={`${details.name} Thumbnail`}
+            className="w-32 h-32 rounded-lg object-cover"
+          />
         </div>
+        {/* Banner Image */}
         <img
           src={details.banner}
           alt={`${details.name} Banner`}
-          className="mt-6 w-full rounded-lg object-cover"
+          className="mt-10 w-full rounded-lg object-cover"
         />
       </div>
 
@@ -81,8 +103,19 @@ const AppDetailsCard = ({
       </div>
 
       {/* Reviews Section */}
-      <div className="bg-white shadow-lg rounded  p-6 mt-8">
+      <div className="bg-white shadow-lg rounded p-6 mt-8">
         <h3 className="text-xl font-semibold text-gray-800 mb-4">Reviews</h3>
+        <ul className="space-y-4">
+          {details.reviews?.map((review, index) => (
+            <li key={index} className="">
+              <p className="text-gray-800 font-semibold">{review.user}</p>
+              <p className="text-yellow-500 flex items-center">
+                Rating: {review.rating} <IoMdStar className="ml-1" />
+              </p>
+              <p className="text-gray-600">{review.comment}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

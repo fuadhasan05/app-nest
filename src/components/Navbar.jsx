@@ -1,13 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../assets/app_logo.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import userIcon from "../assets/userIcon.png";
-import { ToastContainer, toast } from "react-toastify"; 
-import "react-toastify/dist/ReactToastify.css"; 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext); 
+  const { user, logOut } = useContext(AuthContext); // Access user and logOut from AuthContext
+  const [showTooltip, setShowTooltip] = useState(false); // State to manage tooltip visibility
 
   // Handle logout functionality
   const handleLogout = () => {
@@ -65,17 +66,28 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        {/* Right - Login Button */}
-        <div className="flex gap-3">
+        {/* Right - User Profile and Login/Logout */}
+        <div className="flex gap-3 items-center">
           {/* User Profile */}
-          <div>
+          <div
+            className="relative"
+            onMouseEnter={() => setShowTooltip(true)} // Show tooltip on hover
+            onMouseLeave={() => setShowTooltip(false)} // Hide tooltip when not hovering
+          >
             <img
-              className="w-10 rounded-full cursor-pointer bg-blue-400"
-              src={`${user ? user.photoURL : userIcon}`}
+              className="w-10 h-10 rounded-full cursor-pointer bg-blue-100"
+              src={user?.photoURL || userIcon}
               alt="User Profile"
             />
+            {/* Tooltip for username */}
+            {showTooltip && user?.displayName && (
+              <div className="absolute top-12 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-3 py-1 rounded shadow-lg">
+                {user.displayName}
+              </div>
+            )}
           </div>
 
+          {/* Login/Logout Button */}
           {user ? (
             <button
               onClick={handleLogout}
