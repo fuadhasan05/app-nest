@@ -80,7 +80,7 @@ const Register = () => {
     googleLogin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         toast.success("Google login successful!");
         navigate("/");
       })

@@ -8,6 +8,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import Blogs from "../pages/Blogs";
 import ErrorPage from "../pages/ErrorPage";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
         <AppDetails></AppDetails>,
       </PrivateRoute>
     ),
-    hydrateFallbackElement: <p>Loading....</p>,
+    hydrateFallbackElement: <Loading />,
     loader: () => fetch("/app_data.json"),
   },
   {
@@ -45,11 +46,12 @@ const router = createBrowserRouter([
         <MyProfile></MyProfile>
       </PrivateRoute>
     ),
+    hydrateFallbackElement: <Loading />,
   },
   {
     path: "/blogs",
     element: <Blogs></Blogs>,
-    hydrateFallbackElement: <p>Loading....</p>,
+    hydrateFallbackElement: <Loading />,
     loader: () => fetch("../blogs.json"),
   },
   {

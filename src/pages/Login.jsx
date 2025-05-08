@@ -26,7 +26,7 @@ const Login = () => {
     login(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         toast.success("Login successful!");
         navigate("/");
       })
@@ -43,7 +43,7 @@ const Login = () => {
     googleLogin()
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         toast.success("Google login successful!");
         navigate("/");
       })
