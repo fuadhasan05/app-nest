@@ -7,6 +7,7 @@ import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
 import Blogs from "../pages/Blogs";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <h2>Error 404</h2>,
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
