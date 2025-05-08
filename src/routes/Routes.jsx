@@ -6,6 +6,7 @@ import AuthLayout from "../layout/AuthLayout";
 import AppDetails from "../pages/AppDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import MyProfile from "../pages/MyProfile";
+import Blogs from "../pages/Blogs";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,7 @@ const router = createBrowserRouter([
         <AppDetails></AppDetails>,
       </PrivateRoute>
     ),
+    hydrateFallbackElement: <p>Loading....</p>,
     loader: () => fetch("/app_data.json"),
   },
   {
@@ -45,7 +47,9 @@ const router = createBrowserRouter([
   },
   {
     path: "/blogs",
-    element: <h2>Blogs</h2>,
+    element: <Blogs></Blogs>,
+    hydrateFallbackElement: <p>Loading....</p>,
+    loader: () => fetch("../blogs.json"),
   },
   {
     path: "/*",

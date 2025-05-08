@@ -1,0 +1,99 @@
+[
+    {
+      "id": "1",
+      "title": "Level Up Your Coding Journey with Programming Hero",
+      "thumbnail": "https://i.ibb.co.com/mFtV5ybY/programming-hero-th.webp",
+      "banner": "https://i.ibb.co.com/DgkvJqqN/programming-hero-banner.jpg",
+      "excerpt": "Programming Hero transforms coding education into a gamified, hands-on adventure.",
+      "content": "If you've ever struggled to stay motivated while learning to code, Programming Hero might just be the solution. Built for beginners and those polishing their programming chops, this app uses real-world projects and interactive lessons to keep learners engaged. The vibrant visuals, quizzes, and project challenges bring fun into the learning process. Whether you're looking to build your first app or transition into tech, Programming Hero turns education into excitement.",
+      "category": "Education",
+      "author": "Tech Insights Team",
+      "date": "2025-05-01",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "2",
+      "title": "Master Your Workflow with Notion",
+      "thumbnail": "https://i.ibb.co.com/rKdzPxK0/notion-th.png",
+      "banner": "https://i.ibb.co.com/KcZvp8Xg/notion-banner.png",
+      "excerpt": "Notion redefines digital organization with a powerful all-in-one workspace.",
+      "content": "Notion is more than a note-taking app—it's your digital brain. Seamlessly combining documents, databases, calendars, and task lists, it allows for personalized and collaborative workflows. From students managing class notes to teams running entire projects, Notion’s flexibility adapts to every need. Create wikis, plan your week, or build a content calendar—its minimalist interface and rich features make it a favorite among productivity enthusiasts.",
+      "category": "Productivity",
+      "author": "Tech Insights Team",
+      "date": "2025-05-02",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "3",
+      "title": "Track Your Health Goals with MyFitnessPal",
+      "thumbnail": "https://i.ibb.co.com/ZzfTjcCr/My-Fitness-Pa-th.png",
+      "banner": "https://i.ibb.co.com/gLjLCqXH/My-Fitness-Pa-banner.png",
+      "excerpt": "MyFitnessPal helps you take control of your fitness journey—one log at a time.",
+      "content": "When it comes to achieving your wellness goals, consistency is key—and MyFitnessPal makes it simple. With one of the largest food databases and tools for calorie counting, nutrient breakdown, and exercise tracking, it provides clear insights into your health habits. Users praise its intuitive UI and seamless integrations with wearable tech. From weight loss to muscle gain, this app keeps your progress on track.",
+      "category": "Health",
+      "author": "Tech Insights Team",
+      "date": "2025-05-03",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "4",
+      "title": "Organize Anything Effortlessly with Trello",
+      "thumbnail": "https://i.ibb.co.com/fdFtTdXj/trello-th.png",
+      "banner": "https://i.ibb.co.com/23hPcKG2/trello-banner.png",
+      "excerpt": "Trello brings clarity to complex tasks through visual planning and team collaboration.",
+      "content": "Managing tasks doesn’t have to be messy. Trello uses kanban-style boards to help individuals and teams visualize workflows. You can create cards for tasks, add due dates, assign teammates, and move projects through customizable stages. Ideal for agile teams, content creators, and anyone who loves visual task management, Trello brings transparency and simplicity to productivity.",
+      "category": "Productivity",
+      "author": "Tech Insights Team",
+      "date": "2025-05-04",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "5",
+      "title": "Learn a Language the Fun Way with Duolingo",
+      "thumbnail": "https://i.ibb.co.com/p6xPzN8J/duolingo-th.png",
+      "banner": "https://i.ibb.co.com/kggD87Bz/duolingo-banner.png",
+      "excerpt": "Duolingo turns language learning into an addictive daily habit with gamified lessons.",
+      "content": "Whether you're prepping for a trip or expanding your skills, Duolingo offers a lighthearted yet effective way to pick up a new language. With its game-like structure, streak rewards, and bite-sized challenges, it's ideal for learners of all ages. Courses range from Spanish to Japanese, and lessons cover speaking, reading, and listening. It’s like having a personal language tutor in your pocket.",
+      "category": "Education",
+      "author": "Tech Insights Team",
+      "date": "2025-05-05",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "6",
+      "title": "Find Peace and Sleep Better with Calm",
+      "thumbnail": "https://i.ibb.co.com/NdmG7vpt/Calm-th.jpg",
+      "banner": "https://i.ibb.co.com/CpGdb2MY/Calm-banner.jpg",
+      "excerpt": "Calm is your personal sanctuary for reducing stress and improving sleep quality.",
+      "content": "In a world that never slows down, Calm offers a digital escape. Featuring soothing soundscapes, meditation guides, and bedtime stories, it helps you unwind and refocus. Whether you're new to mindfulness or an experienced meditator, its structured programs support emotional well-being. For those struggling with insomnia or anxiety, Calm is a trusted companion for mental clarity and rest.",
+      "category": "Health",
+      "author": "Tech Insights Team",
+      "date": "2025-05-06",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "7",
+      "title": "Quick Notes and Big Ideas with Google Keep",
+      "thumbnail": "https://i.ibb.co.com/1fPbctDf/google-keep-th.png",
+      "banner": "https://i.ibb.co.com/mFFJNrHs/google-keep-banner.png",
+      "excerpt": "Capture thoughts instantly and stay organized with Google Keep's simple interface.",
+      "content": "Google Keep is designed for the fast-paced thinker. With a no-frills interface, it lets you jot down notes, record voice memos, and create checklists instantly. Syncing across devices, it ensures your notes are always at hand. Whether you're brainstorming a novel or planning groceries, Keep is an ideal tool for capturing fleeting thoughts and daily reminders alike.",
+      "category": "Productivity",
+      "author": "Tech Insights Team",
+      "date": "2025-05-07",
+      "readingTime": "3 min read"
+    },
+    {
+      "id": "8",
+      "title": "Advance Your Career with Coursera Courses",
+      "thumbnail": "https://i.ibb.co.com/LDhdjsYQ/coursera-th.png",
+      "banner": "https://i.ibb.co.com/M5V8FWNg/coursera-banner.jpg",
+      "excerpt": "Coursera connects you with world-class education from top universities and companies.",
+      "content": "If you're looking to sharpen your skills or pivot your career, Coursera offers university-level education at your fingertips. From Google certificates to Yale psychology courses, there's something for every professional and curious mind. With self-paced modules, video lectures, and peer-reviewed assignments, Coursera empowers lifelong learners to grow without stepping into a classroom.",
+      "category": "Education",
+      "author": "Tech Insights Team",
+      "date": "2025-05-08",
+      "readingTime": "3 min read"
+    }
+  ]
+  

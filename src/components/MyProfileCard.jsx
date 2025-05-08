@@ -8,6 +8,7 @@ const MyProfileCard = () => {
   const [photoURL, setPhotoURL] = useState(user?.photoURL || ""); 
   const [loading, setLoading] = useState(false); 
 
+
   const handleSaveChanges = async () => {
     if (!name.trim() || !photoURL.trim()) {
       alert("Name and Photo URL cannot be empty.");
